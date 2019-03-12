@@ -1,0 +1,31 @@
+server:
+  port: 8001
+#eureka.client.service-url.default-zone=http://localhost:8761/eureka/
+eureka:
+  client:
+    enabled: false
+
+spring:
+  application:
+      name: auth-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    datasource:
+      url: jdbc:postgresql://localhost:5432/dft_multifinance
+      username: postgres
+      password: chilly98
+      platform: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults:
+        default_schema: users
+
+
+oauth:
+  securiy:
+    clientId: clientid1
+    clientSecret: clientsecret1
